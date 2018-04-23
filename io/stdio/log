@@ -1,0 +1,9 @@
+
+
+fgets(buf,size, stream);
+
+size -1
+
+'\n'
+
+

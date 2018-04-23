@@ -18,6 +18,22 @@ int main(int argc, char **argv)
         exit(1);
     }
 
+    fseek(fp, 0L, SEEK_END);
+
+    printf("%ld\n", ftell(fp));
+
+
+
+
+#if 0
+
+    fp = fopen(argv[1], "r");
+    if(fp == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+
     while(fgetc(fp) != EOF) {
         count++;
     }
@@ -25,6 +41,7 @@ int main(int argc, char **argv)
     printf("count = %d\n", count);
 
     fclose(fp);
+#endif
 
     exit(0);
 }
